@@ -5,6 +5,7 @@ import About from "../About/About";
 import JobCategory from "../JobCategory/JobCategory";
 import HeroSection from "../HeroSection/HeroSection";
 import TabByJobs from "../TabByJobs/TabByJobs";
+import Testimonial from "../Testimonial/Testimonial";
 
 const Home = () => {
   return (

@@ -103,14 +103,14 @@ const Header = () => {
               {user ? (
                 <button
                   onClick={handleLogOut}
-                  className='text-lg font-bold bg-[#EA001E] text-white py-1.5 px-6 rounded-md"'
+                  className='text-lg font-bold bg-[#18ad50] text-white py-1.5 px-6 rounded-md"'
                 >
                   Logout
                 </button>
               ) : (
                 <Link to="/login">
                   <button
-                    className='text-lg font-bold bg-[#EA001E] text-white py-1.5 px-6 rounded-md"'
+                    className='text-lg font-bold bg-[#18ad50] text-white py-1.5 px-6 rounded-md"'
                     // variant="secondary"
                   >
                     Login

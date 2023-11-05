@@ -2,6 +2,7 @@
 import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const SingIn = () => {
   const { signIn, signInWithGoogle } = useContext(AuthContext);
@@ -33,12 +34,12 @@ const SingIn = () => {
         console.log(loggedUser);
         setSuccess("User has been login successfully");
         navigate(from, { replace: true });
-        // Swal.fire({
-        //   title: "success",
-        //   text: "user Login successfully",
-        //   icon: "success",
-        //   confirmButtonText: "Cool",
-        // });
+        Swal.fire({
+          title: "success",
+          text: "user Login successfully",
+          icon: "success",
+          confirmButtonText: "Cool",
+        });
       })
       .catch((error) => {
         console.log(error);

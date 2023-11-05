@@ -1,6 +1,13 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import { FaBriefcase } from "react-icons/fa";
+import {
+  FaArchive,
+  FaBriefcase,
+  FaBriefcaseMedical,
+  FaDigitalTachograph,
+  FaPencilRuler,
+  FaWordpress,
+} from "react-icons/fa";
 
 const JobCategory = () => {
   return (
@@ -8,7 +15,7 @@ const JobCategory = () => {
       <h2 className="lg:text-3xl text-xl font-bold  text-center">
         Job Categories
       </h2>
-      <p className="text-xl text-center my-5">
+      <p className="text-xl text-center mt-5 mb-7">
         Lorem Ipsum is simply dummy text printing and type setting industry
         <br />
         Lorem Ipsum been industry standard dummy text ever since when unknown
@@ -19,7 +26,7 @@ const JobCategory = () => {
           <div className="card-body text-center ">
             {/* <h2 className="card-title text-xl font-bold "> */}{" "}
             <span className="flex justify-center items-center text-7xl  text-white  ">
-              <FaBriefcase className="bg-[#18ad50] p-3  rounded-full  text-white "></FaBriefcase>
+              <FaBriefcase className="bg-[#18ad50] p-3  rounded-lg  text-white "></FaBriefcase>
             </span>
             <h4 className="text-gray-400 "> Web & Software Dev</h4>
             <p className="text-[#18ad50] ">122 Jobs</p>
@@ -29,11 +36,11 @@ const JobCategory = () => {
         <div className="card glass w-full shadow-xl border">
           <div className="card-body text-center ">
             {/* <h2 className="card-title text-xl font-bold "> */}{" "}
-            <span className="flex justify-center items-center text-7xl  text-white  ">
-              <FaBriefcase className="bg-[#18ad50] p-3  rounded-full  text-white "></FaBriefcase>
+            <span className="flex justify-center items-center  text-7xl  text-white  ">
+              <FaBriefcaseMedical className="bg-[#18ad50] p-3 rounded-lg   text-white "></FaBriefcaseMedical>
             </span>
-            <h4 className="text-gray-400 "> Web & Software Dev</h4>
-            <p className="text-[#18ad50] ">122 Jobs</p>
+            <h4 className="text-gray-400 "> Accounting & Consulting</h4>
+            <p className="text-[#18ad50] ">222 Jobs</p>
           </div>
         </div>
 
@@ -41,10 +48,10 @@ const JobCategory = () => {
           <div className="card-body text-center ">
             {/* <h2 className="card-title text-xl font-bold "> */}{" "}
             <span className="flex justify-center items-center text-7xl  text-white  ">
-              <FaBriefcase className="bg-[#18ad50] p-3  rounded-full  text-white "></FaBriefcase>
+              <FaPencilRuler className="bg-[#18ad50] p-3  rounded-lg  text-white "></FaPencilRuler>
             </span>
-            <h4 className="text-gray-400 "> Web & Software Dev</h4>
-            <p className="text-[#18ad50] ">122 Jobs</p>
+            <h4 className="text-gray-400 "> Writing & Translations</h4>
+            <p className="text-[#18ad50] ">300 Jobs</p>
           </div>
         </div>
 
@@ -52,10 +59,10 @@ const JobCategory = () => {
           <div className="card-body text-center ">
             {/* <h2 className="card-title text-xl font-bold "> */}{" "}
             <span className="flex justify-center items-center text-7xl  text-white  ">
-              <FaBriefcase className="bg-[#18ad50] p-3  rounded-full  text-white "></FaBriefcase>
+              <FaArchive className="bg-[#18ad50] p-3  rounded-lg  text-white "></FaArchive>
             </span>
-            <h4 className="text-gray-400 "> Web & Software Dev</h4>
-            <p className="text-[#18ad50] ">122 Jobs</p>
+            <h4 className="text-gray-400 "> Sales & Marketing</h4>
+            <p className="text-[#18ad50] ">120 Jobs</p>
           </div>
         </div>
 
@@ -63,10 +70,10 @@ const JobCategory = () => {
           <div className="card-body text-center ">
             {/* <h2 className="card-title text-xl font-bold "> */}{" "}
             <span className="flex justify-center items-center text-7xl  text-white  ">
-              <FaBriefcase className="bg-[#18ad50] p-3  rounded-full  text-white "></FaBriefcase>
+              <FaDigitalTachograph className="bg-[#18ad50] p-3  rounded-lg  text-white "></FaDigitalTachograph>
             </span>
-            <h4 className="text-gray-400 "> Web & Software Dev</h4>
-            <p className="text-[#18ad50] ">122 Jobs</p>
+            <h4 className="text-gray-400 "> Graphics & Design</h4>
+            <p className="text-[#18ad50] ">450 Jobs</p>
           </div>
         </div>
 
@@ -74,10 +81,10 @@ const JobCategory = () => {
           <div className="card-body text-center ">
             {/* <h2 className="card-title text-xl font-bold "> */}{" "}
             <span className="flex justify-center items-center text-7xl  text-white  ">
-              <FaBriefcase className="bg-[#18ad50] p-3  rounded-full  text-white "></FaBriefcase>
+              <FaWordpress className="bg-[#18ad50] p-3  rounded-lg  text-white "></FaWordpress>
             </span>
-            <h4 className="text-gray-400 "> Web & Software Dev</h4>
-            <p className="text-[#18ad50] ">122 Jobs</p>
+            <h4 className="text-gray-400 "> Digital Marketing</h4>
+            <p className="text-[#18ad50] ">182 Jobs</p>
           </div>
         </div>
       </div>

@@ -53,7 +53,7 @@ const TabByJobs = () => {
   return (
     <div className="max-w-screen-xl mx-auto my-10">
       <div className="text-center py-4">
-        <h1>Animals Sub-Categories</h1>
+        <h1 className="text-3xl font-bold">Job Sub-Categories</h1>
       </div>
       <Tabs data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
         <TabList className="text-center py-4">
@@ -92,26 +92,28 @@ const TabByJobs = () => {
                   </LazyLoad>
                   <div className="m-auto">
                     <h4>
-                      <b>Toy Name :</b> {subcategoryone.toy_name}
+                      <b> Name :</b> {subcategoryone.toy_name}
+                    </h4>
+                    <h4 className="py-2">
+                      <b> Job Title :</b> {subcategoryone.toy_name}
+                    </h4>
+                    <h4>
+                      <b> Job Posting Date :</b> {subcategoryone.toy_name}
+                    </h4>
+                    <h4 className="pt-2">
+                      <b> Application Deadline :</b> {subcategoryone.toy_name}
                     </h4>
                     <p className="py-2">
-                      <b>Price :</b> {subcategoryone.price}
+                      <b> Salary range :</b> {subcategoryone.price}
                     </p>
-                    <div>
-                      <b>Rating :</b>
-                      <Rating
-                        style={{ maxWidth: 100 }}
-                        value={subcategoryone.rating}
-                        readOnly
-                      />
-                    </div>
+
                     <p className="py-2 mb-2">
-                      <b>Available Quantity :</b>
+                      <b> Job Applicants Number :</b>
                       {subcategoryone.available_quantity}
                     </p>
                     <Link
                       to={`/singletoy/${subcategoryone._id}`}
-                      className="btn btn-primary py-2 px-5"
+                      className="btn bg-[#18ad50] text-white"
                     >
                       View Details
                     </Link>
@@ -142,26 +144,28 @@ const TabByJobs = () => {
                   </LazyLoad>
                   <div className="m-auto">
                     <h4>
-                      <b>Toy Name :</b> {subcategoryone.toy_name}
+                      <b> Name :</b> {subcategoryone.toy_name}
+                    </h4>
+                    <h4 className="py-2">
+                      <b> Job Title :</b> {subcategoryone.toy_name}
+                    </h4>
+                    <h4>
+                      <b> Job Posting Date :</b> {subcategoryone.toy_name}
+                    </h4>
+                    <h4 className="pt-2">
+                      <b> Application Deadline :</b> {subcategoryone.toy_name}
                     </h4>
                     <p className="py-2">
-                      <b>Price :</b> {subcategoryone.price}
+                      <b> Salary range :</b> {subcategoryone.price}
                     </p>
-                    <div>
-                      <b>Rating :</b>
-                      <Rating
-                        style={{ maxWidth: 100 }}
-                        value={subcategoryone.rating}
-                        readOnly
-                      />
-                    </div>
+
                     <p className="py-2 mb-2">
-                      <b>Available Quantity :</b>
+                      <b> Job Applicants Number :</b>
                       {subcategoryone.available_quantity}
                     </p>
                     <Link
                       to={`/singletoy/${subcategoryone._id}`}
-                      className="btn btn-primary py-2 px-5"
+                      className="btn bg-[#18ad50] text-white"
                     >
                       View Details
                     </Link>
@@ -192,26 +196,28 @@ const TabByJobs = () => {
                   </LazyLoad>
                   <div className="m-auto">
                     <h4>
-                      <b>Toy Name :</b> {subcategorytow.toy_name}
+                      <b> Name :</b> {subcategorytow.toy_name}
+                    </h4>
+                    <h4 className="py-2">
+                      <b> Job Title :</b> {subcategorytow.toy_name}
+                    </h4>
+                    <h4>
+                      <b> Job Posting Date:</b> {subcategorytow.toy_name}
+                    </h4>
+                    <h4 className="pt-2">
+                      <b> Application Deadline :</b> {subcategorytow.toy_name}
                     </h4>
                     <p className="py-2">
-                      <b>Price :</b> {subcategorytow.price}
+                      <b>Salary range :</b> {subcategorytow.price}
                     </p>
-                    <div>
-                      <b>Rating :</b>
-                      <Rating
-                        style={{ maxWidth: 100 }}
-                        value={subcategorytow.rating}
-                        readOnly
-                      />
-                    </div>
+
                     <p className="py-2 mb-2">
-                      <b>Available Quantity :</b>
+                      <b>Job Applicants Number :</b>
                       {subcategorytow.available_quantity}
                     </p>
                     <Link
                       to={`/singletoy/${subcategorytow._id}`}
-                      className="btn btn-primary py-2 px-5"
+                      className="btn bg-[#18ad50] text-white py-2 px-5"
                     >
                       View Details
                     </Link>
@@ -242,26 +248,28 @@ const TabByJobs = () => {
                   </LazyLoad>
                   <div className="m-auto">
                     <h4>
-                      <b>Toy Name :</b> {subcategorythree.toy_name}
+                      <b> Name :</b> {subcategorythree.toy_name}
+                    </h4>
+                    <h4 className="py-2">
+                      <b> Job Title :</b> {subcategorythree.toy_name}
+                    </h4>
+                    <h4>
+                      <b> Job Posting Date :</b> {subcategorythree.toy_name}
+                    </h4>
+                    <h4 className="pt-2">
+                      <b> Application Deadline :</b> {subcategorythree.toy_name}
                     </h4>
                     <p className="py-2">
-                      <b>Price :</b> {subcategorythree.price}
+                      <b>Salary range :</b> {subcategorythree.price}
                     </p>
-                    <div>
-                      <b>Rating :</b>
-                      <Rating
-                        style={{ maxWidth: 100 }}
-                        value={subcategorythree.rating}
-                        readOnly
-                      />
-                    </div>
+
                     <p className="py-2 mb-2">
-                      <b>Available Quantity :</b>
+                      <b>Job Applicants Number :</b>
                       {subcategorythree.available_quantity}
                     </p>
                     <Link
                       to={`/singletoy/${subcategorythree._id}`}
-                      className="btn btn-primary py-2 px-5"
+                      className="btn bg-[#18ad50] text-white py-2 px-5"
                     >
                       View Details
                     </Link>
