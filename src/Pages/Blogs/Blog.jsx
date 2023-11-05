@@ -5,15 +5,19 @@ import {
   AccordionSummary,
   Typography,
 } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const Blog = () => {
+  useEffect(() => {
+    document.title = "JobWorld | Blog";
+  }, []);
   const [expanded, setExpanded] = React.useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
+
   return (
     <div className="p-5 max-w-screen-xl mx-auto blog">
       <h2 className="text-3xl py-5 text-center text-[#18ad50] ">

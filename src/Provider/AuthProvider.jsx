@@ -1,27 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-// import React, { createContext } from 'react';
-// export const AuthContext = createContext(null);
-// import {
 
-//     getAuth,
-
-//   } from "firebase/auth";
-// import app from '../Firebase/firebase.confiq';
-// const auth = getAuth(app)
-
-// const AuthProvider = () => {
-//     return (
-//         <div>
-
-//         </div>
-//     );
-// };
-
-// export default AuthProvider;
-
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
 import React, { createContext } from "react";
 import {
   createUserWithEmailAndPassword,

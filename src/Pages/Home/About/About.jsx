@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-
+import { FaCheck } from "react-icons/fa";
 const About = () => {
   return (
     <div className="hero min-h-screen bg-base-200">
@@ -16,18 +16,29 @@ const About = () => {
           />
         </div>
         <div className="lg:w-1/2 space-y-5 p-4">
-          <h3 className="text-3xl text-orange-500 font-bold">About Us</h3>
-          <h1 className="text-5xl font-bold">
-            We are qualified & of experience in this field
+          <h3 className="text-3xl text-[#18ad50] font-bold">About Us</h3>
+          <h1 className="text-4xl font-bold">
+            We Help To Get The Best Job And Find A Talent
           </h1>
-          <p className="py-6">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form, by injected
-            humour, or randomised words which do not look even slightly
-            believable.{" "}
+          <p className="py-3">
+            Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
+            diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
+            lorem sit clita duo justo magna dolore erat amet
+          </p>
+          <p className="flex items-center gap-2">
+            <FaCheck className="text-[#18ad50]"></FaCheck>
+            Tempor erat elitr rebum at clita
+          </p>
+          <p className="flex items-center gap-2">
+            <FaCheck className="text-[#18ad50]"></FaCheck>
+            Aliqu diam amet diam et eos
+          </p>
+          <p className="flex items-center gap-2">
+            <FaCheck className="text-[#18ad50]"></FaCheck>
+            Clita duo justo magna dolore erat amet
           </p>
 
-          <button className="btn btn-warning">Get More Info</button>
+          <button className="btn bg-[#18ad50] text-white">Get More Info</button>
         </div>
       </div>
     </div>

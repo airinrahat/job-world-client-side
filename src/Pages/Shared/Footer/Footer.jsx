@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaAngleDoubleRight } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -14,36 +15,126 @@ const Footer = () => {
           <p>Address:Your Address 123 street</p>
         </aside>
         <nav>
-          <header className="footer-title">Job Categories</header>
-          <a className="link link-hover"> Work from Home</a>
-          <a className="link link-hover"> Internship Job</a>
-          <a className="link link-hover"> Freelancer Job</a>
-          <a className="link link-hover"> Part Time Job</a>
-          <a className="link link-hover"> Full Time Job</a>
+          <header className="footer-title text-bold text-gray-600 text-xl">
+            Job Categories
+          </header>
+          <a className="link link-hover flex items-center gap-2  ">
+            {" "}
+            <FaAngleDoubleRight className="text-[#18ad50]"></FaAngleDoubleRight>{" "}
+            Work from Home
+          </a>
+          <a className="link link-hover flex items-center gap-2  ">
+            {" "}
+            <FaAngleDoubleRight className="text-[#18ad50]"></FaAngleDoubleRight>{" "}
+            Internship Job
+          </a>
+          <a className="link link-hover flex items-center gap-2  ">
+            {" "}
+            <FaAngleDoubleRight className="text-[#18ad50]"></FaAngleDoubleRight>{" "}
+            Freelancer Job
+          </a>
+          <a className="link link-hover flex items-center gap-2  ">
+            {" "}
+            <FaAngleDoubleRight className="text-[#18ad50]"></FaAngleDoubleRight>{" "}
+            Part Time Job
+          </a>
+          <a className="link link-hover flex items-center gap-2  ">
+            {" "}
+            <FaAngleDoubleRight className="text-[#18ad50]"></FaAngleDoubleRight>{" "}
+            Full Time Job
+          </a>
         </nav>
         <nav>
-          <header className="footer-title">Job Type</header>
-          <a className="link link-hover"> Create Account</a>
-          <a className="link link-hover"> Career Counselingt</a>
-          <a className="link link-hover"> My Oficiona</a>
-          <a className="link link-hover"> FAQ</a>
-          <a className="link link-hover"> Report a Problem</a>
+          <header className="footer-title text-gray-600 text-xl">
+            Job Type
+          </header>
+          <a className="link link-hover flex items-center gap-2  ">
+            {" "}
+            <FaAngleDoubleRight className="text-[#18ad50]"></FaAngleDoubleRight>{" "}
+            Create Account
+          </a>
+          <a className="link link-hover flex items-center gap-2  ">
+            {" "}
+            <FaAngleDoubleRight className="text-[#18ad50]"></FaAngleDoubleRight>{" "}
+            Career Counselingt
+          </a>
+          <a className="link link-hover flex items-center gap-2  ">
+            {" "}
+            <FaAngleDoubleRight className="text-[#18ad50]"></FaAngleDoubleRight>{" "}
+            My Oficiona
+          </a>
+          <a className="link link-hover flex items-center gap-2  ">
+            {" "}
+            <FaAngleDoubleRight className="text-[#18ad50]"></FaAngleDoubleRight>{" "}
+            FAQ
+          </a>
+          <a className="link link-hover flex items-center gap-2  ">
+            {" "}
+            <FaAngleDoubleRight className="text-[#18ad50]"></FaAngleDoubleRight>{" "}
+            Report a Problem
+          </a>
         </nav>
         <nav>
-          <header className="footer-title">Resources</header>
-          <a className="link link-hover"> My Account</a>
-          <a className="link link-hover"> Support</a>
-          <a className="link link-hover"> How It Works</a>
-          <a className="link link-hover"> Underwriting</a>
-          <a className="link link-hover"> Employers</a>
+          <header className="footer-title text-gray-600 text-xl">
+            Resources
+          </header>
+
+          <a className="link link-hover flex items-center gap-2  ">
+            {" "}
+            <FaAngleDoubleRight className="text-[#18ad50]"></FaAngleDoubleRight>{" "}
+            My Account
+          </a>
+          <a className="link link-hover flex items-center gap-2  ">
+            {" "}
+            <FaAngleDoubleRight className="text-[#18ad50]"></FaAngleDoubleRight>{" "}
+            Support
+          </a>
+          <a className="link link-hover flex items-center gap-2  ">
+            {" "}
+            <FaAngleDoubleRight className="text-[#18ad50]"></FaAngleDoubleRight>{" "}
+            How It Works
+          </a>
+          <a className="link link-hover flex items-center gap-2  ">
+            {" "}
+            <FaAngleDoubleRight className="text-[#18ad50]"></FaAngleDoubleRight>{" "}
+            Underwriting
+          </a>
+          <a className="link link-hover flex items-center gap-2  ">
+            {" "}
+            <FaAngleDoubleRight className="text-[#18ad50]"></FaAngleDoubleRight>{" "}
+            Employers
+          </a>
         </nav>
         <nav>
-          <header className="footer-title">Quick Links</header>
-          <a className="link link-hover"> Jobs Listing</a>
-          <a className="link link-hover"> About Us</a>
-          <a className="link link-hover"> Contact Us</a>
-          <a className="link link-hover"> Privacy Policy</a>
-          <a className="link link-hover"> Term & Condition</a>
+          <header className="footer-title text-gray-600 text-xl">
+            Quick Links
+          </header>
+
+          <a className="link link-hover flex items-center gap-2  ">
+            {" "}
+            <FaAngleDoubleRight className="text-[#18ad50]"></FaAngleDoubleRight>{" "}
+            Jobs Listing
+          </a>
+          <a className="link link-hover flex items-center gap-2  ">
+            {" "}
+            <FaAngleDoubleRight className="text-[#18ad50]"></FaAngleDoubleRight>{" "}
+            About Us
+          </a>
+          <a className="link link-hover flex items-center gap-2  ">
+            {" "}
+            <FaAngleDoubleRight className="text-[#18ad50]"></FaAngleDoubleRight>{" "}
+            Contact Us
+          </a>
+          <a className="link link-hover flex items-center gap-2  ">
+            {" "}
+            <FaAngleDoubleRight className="text-[#18ad50]"></FaAngleDoubleRight>{" "}
+            Privacy Policy
+          </a>
+          <a className="link link-hover flex items-center gap-2  ">
+            {" "}
+            <FaAngleDoubleRight className="text-[#18ad50]"></FaAngleDoubleRight>{" "}
+            Term & Condition
+          </a>
         </nav>
       </footer>
       <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">

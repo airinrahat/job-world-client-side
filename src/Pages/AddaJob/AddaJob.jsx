@@ -1,7 +1,10 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useEffect } from "react";
 
 const AddaJob = () => {
+  useEffect(() => {
+    document.title = "JobWorld | AddaJob";
+  }, []);
   return (
     <div>
       <div className="max-w-screen-xl mx-auto mt-5 px-10 lg:px-0">

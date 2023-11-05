@@ -1,8 +1,11 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const AllJob = () => {
+  useEffect(() => {
+    document.title = "JobWorld | AllJob";
+  }, []);
   return (
     <div className="max-w-screen-xl mx-auto my-10">
       <h2 className="text-center text-3xl font-bold my-5">
