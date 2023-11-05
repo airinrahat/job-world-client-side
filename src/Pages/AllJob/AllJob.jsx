@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import "./AllJob.css";
 
 const AllJob = () => {
   useEffect(() => {
@@ -14,8 +15,8 @@ const AllJob = () => {
       <div className="text-center pb-3 my-4">
         <input
           type="text"
-          placeholder="Search Toy Name or Sub Categody"
-          className="search"
+          placeholder="Search Job Name or Sub Category"
+          className="search border-solid border-2 border-[#18ad50]"
           style={{ width: "50%", padding: "12px" }}
         />
       </div>

@@ -54,7 +54,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/viewDetails",
-        element: <ViewDetails></ViewDetails>,
+        element: (
+          <PrivateRoute>
+            <ViewDetails></ViewDetails>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/addaJob",

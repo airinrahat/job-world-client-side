@@ -12,9 +12,11 @@ const Home = () => {
     <div>
       <Banner></Banner>
       <About></About>
+
       <TabByJobs></TabByJobs>
       <JobCategory></JobCategory>
       <HeroSection></HeroSection>
+      <Testimonial></Testimonial>
     </div>
   );
 };
