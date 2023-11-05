@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layouts/Main";
 import Home from "../Pages/Home/Home/Home";
-import Login from "../Pages/LoginSingUp/Login";
-import SingUp from "../Pages/LoginSingUp/SingUp/SingUp";
+// import Login from "../Pages/LoginSingUp/Login";
+import SingUp2 from "../Pages/LoginSingUp/SingUp/SingUp2";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Blog from "../Pages/Blogs/Blog";
 import MyJob from "../Pages/MyJob/MyJob";
@@ -11,6 +11,7 @@ import AllJob from "../Pages/AllJob/AllJob";
 import ViewDetails from "../Pages/AllJob/ViewDetails/ViewDetails";
 import AddaJob from "../Pages/AddaJob/AddaJob";
 import AppliedJob from "../Pages/AppliedJob/AppliedJob";
+import Login2 from "../Pages/LoginSingUp/Login2";
 
 const router = createBrowserRouter([
   {
@@ -24,11 +25,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/login",
-        element: <Login></Login>,
+        element: <Login2></Login2>,
       },
       {
         path: "/singup",
-        element: <SingUp></SingUp>,
+        element: <SingUp2></SingUp2>,
       },
       {
         path: "/blog",

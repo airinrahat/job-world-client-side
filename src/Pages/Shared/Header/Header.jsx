@@ -74,9 +74,11 @@ const Header = () => {
               />
             </div>
 
-            <button className="text-xl bg-[#18ad50] text-white py-2 px-5 rounded-md">
-              Login
-            </button>
+            <Link to="/login">
+              <button className="text-xl bg-[#18ad50] text-white py-2 px-5 rounded-md">
+                Login
+              </button>
+            </Link>
           </div>
         </div>
       </nav>
