@@ -1,8 +1,16 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
+  console.log(user);
+  const handleLogOut = () => {
+    logOut()
+      .then()
+      .catch((error) => console.log(error));
+  };
   const links = (
     <>
       <li>
@@ -68,17 +76,54 @@ const Header = () => {
               <div className="flex justify-center gap-3 items-center">
                 {/* <p className='font-semibold text-xl'></p> */}
               </div>
-              <img
+
+              <div className="text-center lg:text-start">
+                {user ? (
+                  <div className="flex justify-center gap-3 items-center">
+                    <p className="font-semibold text-xl">{user.displayName}</p>
+                    <img
+                      className="rounded-full h-12 w-12"
+                      src={user.photoURL}
+                    />
+                  </div>
+                ) : (
+                  <img
+                    className="rounded-full h-12 w-12"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTHTAJPlLEQwOQG_g-WNP0WayMmnpM-Nq9ZA&usqp=CAU"
+                  />
+                )}
+              </div>
+              {/* <img
                 className="rounded-full h-12 w-12"
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTHTAJPlLEQwOQG_g-WNP0WayMmnpM-Nq9ZA&usqp=CAU"
-              />
+              /> */}
             </div>
 
-            <Link to="/login">
+            <div className="text-center lg:text-start">
+              {user ? (
+                <button
+                  onClick={handleLogOut}
+                  className='text-lg font-bold bg-[#EA001E] text-white py-1.5 px-6 rounded-md"'
+                >
+                  Logout
+                </button>
+              ) : (
+                <Link to="/login">
+                  <button
+                    className='text-lg font-bold bg-[#EA001E] text-white py-1.5 px-6 rounded-md"'
+                    // variant="secondary"
+                  >
+                    Login
+                  </button>
+                </Link>
+              )}
+            </div>
+
+            {/* <Link to="/login">
               <button className="text-xl bg-[#18ad50] text-white py-2 px-5 rounded-md">
                 Login
               </button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </nav>

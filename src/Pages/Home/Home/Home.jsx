@@ -4,12 +4,14 @@ import Banner from "./Banner/Banner";
 import About from "../About/About";
 import JobCategory from "../JobCategory/JobCategory";
 import HeroSection from "../HeroSection/HeroSection";
+import TabByJobs from "../TabByJobs/TabByJobs";
 
 const Home = () => {
   return (
     <div>
       <Banner></Banner>
       <About></About>
+      <TabByJobs></TabByJobs>
       <JobCategory></JobCategory>
       <HeroSection></HeroSection>
     </div>
