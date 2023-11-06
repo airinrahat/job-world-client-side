@@ -53,7 +53,7 @@ const TabByJobs = () => {
   return (
     <div className="max-w-screen-xl mx-auto my-10">
       <div className="text-center py-4">
-        <h1 className="text-3xl font-bold">Job Sub-Categories</h1>
+        <h1 className="text-3xl font-bold">Job By-Category</h1>
       </div>
       <Tabs data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
         <TabList className="text-center py-4">

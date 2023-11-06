@@ -68,7 +68,7 @@ const MyJobs = ({ myjob }) => {
 
       <td className="text-xl"> {datepic}</td>
       <td>
-        <Link to="/updateJob">
+        <Link to={`/updateJob/${_id}`}>
           <button className="btn btn-primary">Update</button>
         </Link>
       </td>

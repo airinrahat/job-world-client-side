@@ -50,8 +50,10 @@ const router = createBrowserRouter([
         loader: () => fetch("http://localhost:5000/addjob"),
       },
       {
-        path: "/updateJob",
+        path: "/updateJob/:id",
         element: <UpdateJob></UpdateJob>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/addjob/${params.id}`),
       },
       {
         path: "/viewDetails",

@@ -52,19 +52,14 @@ const AddaJob = () => {
         if (data.insertedId) {
           Swal.fire({
             title: "success",
-            text: "user added successfully",
+            text: "job added successfully",
             icon: "success",
             confirmButtonText: "Cool",
           });
         }
       });
   };
-  //   fetch("http://localhost:5000/addjob")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       console.log(data);
-  //     });
-  // };
+
   return (
     <div>
       <div className="max-w-screen-xl mx-auto mt-5 px-10 lg:px-0">
@@ -84,8 +79,8 @@ const AddaJob = () => {
                   Name
                 </span>
               </label>
-              <label className="input-group input input-bordered  w-full">
-                <input type="text" name="name" placeholder="Name" />
+              <label className="input-group input input-bordered w-full">
+                <input type="text" name="name" placeholder=" name" />
               </label>
             </div>
 
