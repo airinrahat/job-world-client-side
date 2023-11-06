@@ -64,13 +64,8 @@ const AddaJob = () => {
                   Name
                 </span>
               </label>
-              <label className="input-group">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                  className="input input-bordered w-full"
-                />
+              <label className="input-group input input-bordered  w-full">
+                <input type="text" name="name" placeholder="Name" />
               </label>
             </div>
 
@@ -80,13 +75,8 @@ const AddaJob = () => {
                   Job Title
                 </span>
               </label>
-              <label className="input-group">
-                <input
-                  type="text"
-                  name="title"
-                  placeholder="Job Title"
-                  className="input input-bordered w-full"
-                />
+              <label className="input-group input input-bordered w-full">
+                <input type="text" name="title" placeholder="Job Title" />
               </label>
             </div>
           </div>
@@ -98,13 +88,8 @@ const AddaJob = () => {
                   Job Category
                 </span>
               </label>
-              <label className="input-group">
-                <input
-                  type="text"
-                  name="category"
-                  placeholder="Category"
-                  className="input input-bordered w-full"
-                />
+              <label className="input-group input input-bordered w-full">
+                <input type="text" name="category" placeholder="Category" />
               </label>
             </div>
 
@@ -114,13 +99,12 @@ const AddaJob = () => {
                   Salary Range
                 </span>
               </label>
-              <label className="input-group">
+              <label className="input-group input input-bordered w-full">
                 <input
                   type="text"
                   name="price"
                   defaultValue={"$"}
                   placeholder="price"
-                  className="input input-bordered w-full"
                 />
               </label>
             </div>
@@ -133,13 +117,13 @@ const AddaJob = () => {
                   Job Applicants
                 </span>
               </label>
-              <label className="input-group">
+              <label className="input-group input  input-bordered ">
                 <input
                   type="number"
                   name=" Job Applicants"
                   value="0"
                   placeholder="rating"
-                  className="input input-bordered w-full"
+                  className=" input-bordered  w-full"
                 />
               </label>
             </div>
@@ -150,13 +134,8 @@ const AddaJob = () => {
                   Photo URL
                 </span>
               </label>
-              <label className="input-group">
-                <input
-                  type="text"
-                  name="photo"
-                  placeholder="Photo URL"
-                  className="input input-bordered w-full"
-                />
+              <label className="input-group input input-bordered text-[#999] w-full ">
+                <input type="text" name="photo" placeholder="Photo URL" />
               </label>
             </div>
           </div>
@@ -196,12 +175,11 @@ const AddaJob = () => {
                   Job Description
                 </span>
               </label>
-              <label className="input-group">
+              <label className="input-group input input-bordered text-[#999] w-full h-20">
                 <input
                   type="text"
                   name="description"
                   placeholder="Short description"
-                  className="input input-bordered w-full h-20"
                 ></input>
               </label>
             </div>

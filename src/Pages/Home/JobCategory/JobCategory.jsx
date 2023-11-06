@@ -13,9 +13,9 @@ const JobCategory = () => {
   return (
     <div className="max-w-screen-xl mx-auto my-5 py-16 lg:px-0 px-10">
       <h2 className="lg:text-3xl text-xl font-bold  text-center">
-        Job Categories
+        Job Service
       </h2>
-      <p className="text-xl text-center mt-5 mb-7">
+      <p className=" text-center mt-5 mb-7">
         Lorem Ipsum is simply dummy text printing and type setting industry
         <br />
         Lorem Ipsum been industry standard dummy text ever since when unknown

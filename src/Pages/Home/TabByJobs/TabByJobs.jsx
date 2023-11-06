@@ -61,13 +61,16 @@ const TabByJobs = () => {
             <b>1: All Jobs</b>
           </Tab>
           <Tab>
-            <b>2: DOGS</b>
+            <b>2: On Site Job</b>
           </Tab>
           <Tab>
-            <b>3: TEDDY BEARS</b>
+            <b>3: Remote Job</b>
           </Tab>
           <Tab>
-            <b>4: CATS</b>
+            <b>4: Hybrid</b>
+          </Tab>
+          <Tab>
+            <b>4: Part Time</b>
           </Tab>
         </TabList>
 

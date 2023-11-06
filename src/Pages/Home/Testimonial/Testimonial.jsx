@@ -4,11 +4,11 @@ import { FaQuoteLeft } from "react-icons/fa";
 const Testimonial = () => {
   return (
     <div>
-      <h2 className="text-5xl text-center font-bold mb-4 mt-7">
+      <h2 className="text-3xl text-center font-bold mb-4 mt-7">
         {" "}
         Testimonials
       </h2>
-      <p className="text-2xl text-center">
+      <p className="text-xl text-center">
         I recently got my hands on Flowbite Pro, and holy crap,<br></br> Im
         speechless with how easy this was to integrate within my application
       </p>
@@ -31,7 +31,7 @@ const Testimonial = () => {
                 <h2 className="text-3xl font-bold my-3">
                   Efficient Collaborating
                 </h2>
-                <p className="text-2xl font-medium text-gray-900 dark:text-white">
+                <p className="text-xl font-medium text-gray-900 dark:text-white">
                   Flowbite is just awesome. It contains tons of predesigned
                   components and pages starting from login screen to complex
                   dashboard.
@@ -40,7 +40,7 @@ const Testimonial = () => {
               <div className="flex items-center justify-center mt-6 space-x-3">
                 <img
                   className="w-6 h-6 rounded-full"
-                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+                  src="https://i.ibb.co/tHvGqYs/banner1.jpg"
                   alt="profile picture"
                 />
                 <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
@@ -73,7 +73,7 @@ const Testimonial = () => {
                 <h2 className="text-3xl font-bold my-3">
                   Efficient Collaborating
                 </h2>
-                <p className="text-2xl font-medium text-gray-900 dark:text-white">
+                <p className="text-xl font-medium text-gray-900 dark:text-white">
                   Flowbite is just awesome. It contains tons of predesigned
                   components and pages starting from login screen to complex
                   dashboard.
@@ -82,7 +82,7 @@ const Testimonial = () => {
               <div className="flex items-center justify-center mt-6 space-x-3">
                 <img
                   className="w-6 h-6 rounded-full"
-                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+                  src="https://i.ibb.co/tHvGqYs/banner1.jpg"
                   alt="profile picture"
                 />
                 <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
@@ -115,7 +115,7 @@ const Testimonial = () => {
                 <h2 className="text-3xl font-bold my-3">
                   Efficient Collaborating
                 </h2>
-                <p className="text-2xl font-medium text-gray-900 dark:text-white">
+                <p className="text-xl font-medium text-gray-900 dark:text-white">
                   Flowbite is just awesome. It contains tons of predesigned
                   components and pages starting from login screen to complex
                   dashboard.
@@ -124,7 +124,7 @@ const Testimonial = () => {
               <div className="flex items-center justify-center mt-6 space-x-3">
                 <img
                   className="w-6 h-6 rounded-full"
-                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+                  src="https://i.ibb.co/tHvGqYs/banner1.jpg"
                   alt="profile picture"
                 />
                 <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
