@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import Swal from "sweetalert2";
 
 const AddaJob = () => {
   useEffect(() => {
@@ -15,36 +16,54 @@ const AddaJob = () => {
 
     const form = event.target;
 
+    const name = form.name.value;
+    const jobtitle = form.jobtitle.value;
+    const jobcategory = form.jobcategory.value;
+    const salary = form.salary.value;
+    // const JobApplicants = form.JobApplicants.value;
+    const photo = form.photo.value;
+    const applicationDeadline = form.applicationDeadline.value;
     const datepic = form.datepicker.value;
     const description = form.description.value;
 
-    const newProduct = {
+    const newAddJob = {
       datepic,
+      jobtitle,
+      jobcategory,
+      salary,
+
+      photo,
+      applicationDeadline,
       description,
     };
-    console.log(newProduct);
+    console.log(newAddJob);
 
-    // fetch("https://brand-shop-server-side-beige.vercel.app/cart", {
-    //   method: "POST",
-    //   headers: {
-    //     "content-type": "application/json",
-    //   },
-    //   body: JSON.stringify(newProduct),
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     console.log(data);
-    //     if (data.insertedId) {
-    //       Swal.fire({
-    //         title: "success",
-    //         text: "user added successfully",
-    //         icon: "success",
-    //         confirmButtonText: "Cool",
-    //       });
-    //     }
-    //   });
+    fetch("http://localhost:5000/addjob", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newAddJob),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            title: "success",
+            text: "user added successfully",
+            icon: "success",
+            confirmButtonText: "Cool",
+          });
+        }
+      });
   };
-
+  //   fetch("http://localhost:5000/addjob")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       console.log(data);
+  //     });
+  // };
   return (
     <div>
       <div className="max-w-screen-xl mx-auto mt-5 px-10 lg:px-0">
@@ -76,7 +95,7 @@ const AddaJob = () => {
                 </span>
               </label>
               <label className="input-group input input-bordered w-full">
-                <input type="text" name="title" placeholder="Job Title" />
+                <input type="text" name="jobtitle" placeholder="Job Title" />
               </label>
             </div>
           </div>
@@ -89,7 +108,7 @@ const AddaJob = () => {
                 </span>
               </label>
               <label className="input-group input input-bordered w-full">
-                <input type="text" name="category" placeholder="Category" />
+                <input type="text" name="jobcategory" placeholder="Category" />
               </label>
             </div>
 
@@ -102,7 +121,7 @@ const AddaJob = () => {
               <label className="input-group input input-bordered w-full">
                 <input
                   type="text"
-                  name="price"
+                  name="salary"
                   defaultValue={"$"}
                   placeholder="price"
                 />
@@ -120,9 +139,8 @@ const AddaJob = () => {
               <label className="input-group input  input-bordered ">
                 <input
                   type="number"
-                  name=" Job Applicants"
-                  value="0"
-                  placeholder="rating"
+                  name=" JobApplicants"
+                  placeholder="jobApplicants"
                   className=" input-bordered  w-full"
                 />
               </label>
@@ -162,8 +180,8 @@ const AddaJob = () => {
                   Application Deadline
                 </span>
               </label>
-              <label className="input-group input input-bordered text-[#999] w-full pt-3">
-                <input></input>
+              <label className="input-group input input-bordered text-[#999] w-full ">
+                <input name="applicationDeadline" type="date"></input>
               </label>
             </div>
           </div>
@@ -175,14 +193,31 @@ const AddaJob = () => {
                   Job Description
                 </span>
               </label>
-              <label className="input-group input input-bordered text-[#999] w-full h-20">
+              <label className="input-group rounded-l-lg text-[#999]  ">
                 <input
                   type="text"
                   name="description"
                   placeholder="Short description"
+                  className="input input-bordered w-full h-20"
                 ></input>
               </label>
             </div>
+            {/* <div className="form-control w-full">
+            <label className="label">
+              <span className="label-text text-2xl font-bold">
+                Short description
+              </span>
+            </label>
+            <label className="input-group">
+              <input
+                type="text"
+                name="description"
+                defaultValue={description}
+                placeholder="Short description"
+                className="input input-bordered w-full h-20"
+              ></input>
+            </label>
+          </div> */}
           </div>
           <div className="md:flex mb-5">
             <div className="form-control md:w-1/2 ml-4">
