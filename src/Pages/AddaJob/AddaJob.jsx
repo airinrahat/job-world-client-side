@@ -1,10 +1,50 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const AddaJob = () => {
   useEffect(() => {
     document.title = "JobWorld | AddaJob";
   }, []);
+
+  const [startDate, setStartDate] = useState(new Date());
+
+  const handleAddJob = (event) => {
+    event.preventDefault();
+
+    const form = event.target;
+
+    const datepic = form.datepicker.value;
+    const description = form.description.value;
+
+    const newProduct = {
+      datepic,
+      description,
+    };
+    console.log(newProduct);
+
+    // fetch("https://brand-shop-server-side-beige.vercel.app/cart", {
+    //   method: "POST",
+    //   headers: {
+    //     "content-type": "application/json",
+    //   },
+    //   body: JSON.stringify(newProduct),
+    // })
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     console.log(data);
+    //     if (data.insertedId) {
+    //       Swal.fire({
+    //         title: "success",
+    //         text: "user added successfully",
+    //         icon: "success",
+    //         confirmButtonText: "Cool",
+    //       });
+    //     }
+    //   });
+  };
+
   return (
     <div>
       <div className="max-w-screen-xl mx-auto mt-5 px-10 lg:px-0">
@@ -15,7 +55,7 @@ const AddaJob = () => {
           readable content of a page when looking at its layout. The point of
           using Lorem
         </p>
-        <form className="my-10">
+        <form className="my-10" onSubmit={handleAddJob}>
           {/* form name and quantity row */}
           <div className="md:flex gap-5 mb-5">
             <div className="form-control md:w-1/2">
@@ -128,12 +168,11 @@ const AddaJob = () => {
                   Job Posting Date
                 </span>
               </label>
-              <label className="input-group">
-                <input
-                  type="text"
-                  name="brand"
-                  placeholder="Job Posting Date"
-                  className="input input-bordered w-full"
+              <label className="input-group input input-bordered text-[#999] w-full pt-3">
+                <DatePicker
+                  selected={startDate}
+                  onChange={(date) => setStartDate(date)}
+                  name="datepicker"
                 />
               </label>
             </div>
@@ -144,13 +183,8 @@ const AddaJob = () => {
                   Application Deadline
                 </span>
               </label>
-              <label className="input-group">
-                <input
-                  type="text"
-                  name=" Application"
-                  placeholder=" Application Deadline"
-                  className="input input-bordered w-full"
-                />
+              <label className="input-group input input-bordered text-[#999] w-full pt-3">
+                <input></input>
               </label>
             </div>
           </div>
