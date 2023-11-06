@@ -28,10 +28,11 @@ const AddaJob = () => {
 
     const newAddJob = {
       datepic,
+
       jobtitle,
       jobcategory,
       salary,
-
+      name,
       photo,
       applicationDeadline,
       description,
