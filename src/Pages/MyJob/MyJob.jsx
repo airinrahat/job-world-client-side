@@ -2,9 +2,11 @@
 import React, { useEffect } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import MyJobs from "./MyJobs";
+import { useState } from "react";
 
 const MyJob = () => {
-  const myjobs = useLoaderData();
+  const loadedmyjobs = useLoaderData();
+  const [myjobs, setMyjobs] = useState(loadedmyjobs);
   useEffect(() => {
     document.title = "jobworld | My Toys";
   }, []);
@@ -32,7 +34,12 @@ const MyJob = () => {
           </thead>
           <tbody>
             {myjobs.map((myjob) => (
-              <MyJobs key={myjob._id} myjob={myjob}></MyJobs>
+              <MyJobs
+                key={myjob._id}
+                myjob={myjob}
+                myjobs={myjobs}
+                setMyjobs={setMyjobs}
+              ></MyJobs>
             ))}
           </tbody>
         </table>

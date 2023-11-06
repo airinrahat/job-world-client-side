@@ -1,42 +1,12 @@
 /* eslint-disable no-unused-vars */
 import { Rating } from "@mui/material";
-import React from "react";
+import React, { useContext } from "react";
+import { AuthContext } from "../../../Provider/AuthProvider";
 
 const ViewDetails = () => {
+  const { user } = useContext(AuthContext);
   return (
     <div>
-      {/* <div className="max-w-sm mx-auto my-8 rounded overflow-hidden shadow-lg lg:px-0 px-10">
-        <img
-          className="w-[100%] h-52"
-          src="https://i.ibb.co/Bjs2K0y/jobs.png"
-          alt=""
-        />
-        <div className="p-3">
-          <h3 className="text-xl mb-1">
-            <b>Job Banner</b>
-          </h3>
-          <h2 className="text-lg">
-            <b> Job title: </b>
-          </h2>
-          <p>
-            <b>Description:</b>
-          </p>
-          <p>
-            <b> Salary range:</b>
-          </p>
-          <p>
-            <b> Number of Applicants:</b> :
-          </p>
-
-          <div className="py-5">
-           
-            <button className="btn bg-[#18ad50] text-white mr-2">
-              Apply Button
-            </button>
-        
-          </div>
-        </div>
-      </div> */}
       <div className="card lg:card-side bg-base-100  max-w-sm mx-auto my-8 rounded overflow-hidden  lg:px-0 px-10">
         <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <a href="#">
@@ -83,12 +53,14 @@ const ViewDetails = () => {
                   Name:
                   <input
                     type="text"
+                    defaultValue={user.displayName}
                     placeholder="Name"
                     className="input input-bordered w-full my-3 "
                   />
                   Email:
                   <input
                     type="email"
+                    defaultValue={user.email}
                     placeholder="Email"
                     className="input input-bordered w-full  my-3"
                   />

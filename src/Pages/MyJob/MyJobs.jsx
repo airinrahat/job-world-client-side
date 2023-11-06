@@ -4,7 +4,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const MyJobs = ({ myjob }) => {
+const MyJobs = ({ myjob, setMyjobs, myjobs }) => {
   const {
     _id,
     datepic,
@@ -37,8 +37,8 @@ const MyJobs = ({ myjob }) => {
             if (data.deletedCount > 0) {
               Swal.fire("Deleted!", "This Job has been deleted.", "success");
 
-              // const remaining = Carts.filter((toyy) => toyy._id !== _id);
-              // setCarts(remaining);
+              const remaining = myjobs.filter((job) => job._id !== _id);
+              setMyjobs(remaining);
             }
           });
       }
