@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const MyJobs = ({ myjob }) => {
   const {
@@ -15,6 +16,35 @@ const MyJobs = ({ myjob }) => {
     applicationDeadline,
     description,
   } = myjob;
+
+  const handleDelete = (_id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/addjob/${_id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            if (data.deletedCount > 0) {
+              Swal.fire("Deleted!", "This Job has been deleted.", "success");
+
+              // const remaining = Carts.filter((toyy) => toyy._id !== _id);
+              // setCarts(remaining);
+            }
+          });
+      }
+    });
+  };
+
   return (
     <tr>
       <td>
@@ -43,7 +73,12 @@ const MyJobs = ({ myjob }) => {
         </Link>
       </td>
       <td>
-        <button className="btn btn-error text-white">Delete</button>
+        <button
+          onClick={() => handleDelete(_id)}
+          className="btn btn-error text-white"
+        >
+          Delete
+        </button>
       </td>
     </tr>
   );
