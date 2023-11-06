@@ -9,7 +9,12 @@ const AddaJob = () => {
     <div>
       <div className="max-w-screen-xl mx-auto mt-5 px-10 lg:px-0">
         <h2 className="text-center text-4xl">Add A Job</h2>
-
+        <p className="text-center text-xl my-3">
+          It is a long established fact that a reader will be distraceted by the
+          <br></br>
+          readable content of a page when looking at its layout. The point of
+          using Lorem
+        </p>
         <form className="my-10">
           {/* form name and quantity row */}
           <div className="md:flex gap-5 mb-5">

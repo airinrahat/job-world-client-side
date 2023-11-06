@@ -84,7 +84,7 @@ const ViewDetails = () => {
                   <input
                     type="text"
                     placeholder="Name"
-                    className="input input-bordered w-full  "
+                    className="input input-bordered w-full my-3 "
                   />
                   Email:
                   <input
@@ -95,13 +95,12 @@ const ViewDetails = () => {
                   <br />
                   <label>Select a file : </label>
                   <input type="file" id="myfile" name="myfile" />
-                  <br />
-                  <br />
-                  <input type="submit" />
-                  <button className="btn">Close</button>
                 </form>
                 <div className="modal-action">
-                  <button className="btn">Close</button>
+                  <form method="dialog ">
+                    <button className="btn btn-success  mr-4">Submit</button>
+                    <button className="btn">Close</button>
+                  </form>
                 </div>
               </div>
             </dialog>
