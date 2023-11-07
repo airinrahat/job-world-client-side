@@ -8,16 +8,16 @@ const About = () => {
         <div className="lg:w-1/2 relative">
           <img
             src="https://i.ibb.co/FDDxFkf/banner.jpg"
-            className="w-3/4 rounded-lg shadow-2xl"
+            className="w-4/4 rounded-lg shadow-2xl"
           />
           <img
             src="https://i.ibb.co/YyzGZg9/about.jpg"
-            className="w-1/2 absolute right-5 top-1/2 rounded-lg border-8 border-white shadow-2xl"
+            className="w-3/4 absolute right-5 top-1/2 rounded-lg border-8 border-white shadow-2xl"
           />
         </div>
         <div className="lg:w-1/2 space-y-5 p-4">
-          <h3 className="text-3xl text-[#18ad50] font-bold">About Us</h3>
-          <h1 className="text-4xl font-bold">
+          <h3 className="text-2xl text-[#18ad50] font-bold">About Us</h3>
+          <h1 className="text-3xl font-bold">
             We Help To Get The Best Job And Find A Talent
           </h1>
           <p className="py-3">

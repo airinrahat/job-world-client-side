@@ -52,8 +52,8 @@ const TabByJobs = () => {
 
   return (
     <div className="max-w-screen-xl mx-auto my-10">
-      <div className="text-center py-4">
-        <h1 className="text-3xl font-bold">Job By-Category</h1>
+      <div className="text-center py-4 ">
+        <h1 className="text-3xl mt-6 font-bold">Job By-Category</h1>
       </div>
       <Tabs data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
         <TabList className="text-center py-4">
@@ -115,7 +115,7 @@ const TabByJobs = () => {
                       {subcategoryone.available_quantity}
                     </p>
                     <Link
-                      to={`/singletoy/${subcategoryone._id}`}
+                      to="/SingleJob"
                       className="btn bg-[#18ad50] text-white"
                     >
                       View Details

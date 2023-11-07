@@ -3,6 +3,7 @@ import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
+import { useEffect } from "react";
 // import Swal from "sweetalert2";
 // import "./SingIn.css";
 
@@ -11,7 +12,9 @@ const SingUp = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [show, setShow] = useState(false);
-
+  useEffect(() => {
+    document.title = "JobWorld | SingUp";
+  }, []);
   const navigate = useNavigate();
   const location = useLocation();
   console.log("login page location", location);

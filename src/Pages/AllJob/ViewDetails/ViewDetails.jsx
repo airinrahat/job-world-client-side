@@ -3,11 +3,16 @@ import { Rating } from "@mui/material";
 import React, { useContext } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import { useLoaderData } from "react-router-dom";
+import { useEffect } from "react";
 
 const ViewDetails = () => {
   const { user } = useContext(AuthContext);
+  useEffect(() => {
+    document.title = "JobWorld | ViewDetails";
+  }, []);
   const viewDetail = useLoaderData();
   const { jobtitle, description, salary, JobApplicants } = viewDetail;
+
   return (
     <div>
       <div className="card lg:card-side bg-base-100  max-w-sm mx-auto my-8 rounded overflow-hidden  lg:px-0 px-10">

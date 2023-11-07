@@ -8,7 +8,7 @@ const MyJob = () => {
   const loadedmyjobs = useLoaderData();
   const [myjobs, setMyjobs] = useState(loadedmyjobs);
   useEffect(() => {
-    document.title = "jobworld | My Toys";
+    document.title = "jobworld | My Jobs";
   }, []);
   return (
     <div className="max-w-screen-xl mx-auto my-10">

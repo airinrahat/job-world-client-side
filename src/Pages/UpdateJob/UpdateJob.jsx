@@ -1,9 +1,13 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
+import { useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdateJob = () => {
+  useEffect(() => {
+    document.title = "JobWorld | UpdateJob";
+  }, []);
   const myjob = useLoaderData();
   const {
     _id,

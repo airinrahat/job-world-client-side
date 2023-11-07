@@ -3,7 +3,7 @@ import React from "react";
 import { FaQuoteLeft } from "react-icons/fa";
 const Testimonial = () => {
   return (
-    <div>
+    <div className="">
       <h2 className="text-3xl text-center font-bold mb-4 mt-7">
         {" "}
         Testimonials
@@ -12,7 +12,7 @@ const Testimonial = () => {
         I recently got my hands on Flowbite Pro, and holy crap,<br></br> Im
         speechless with how easy this was to integrate within my application
       </p>
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid  grid-cols-1 lg:grid-cols-3 gap-3">
         <section className="bg-white dark:bg-gray-900">
           <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
             <figure className="max-w-screen-md mx-auto">

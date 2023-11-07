@@ -13,6 +13,7 @@ import AddaJob from "../Pages/AddaJob/AddaJob";
 import AppliedJob from "../Pages/AppliedJob/AppliedJob";
 import Login2 from "../Pages/LoginSingUp/Login2";
 import PrivateRoute from "./PrivateRoute";
+import SingleJob from "../Pages/SingleJob/SingleJob";
 
 const router = createBrowserRouter([
   {
@@ -79,6 +80,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <AppliedJob></AppliedJob>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/SingleJob",
+        element: (
+          <PrivateRoute>
+            <SingleJob></SingleJob>
           </PrivateRoute>
         ),
       },
