@@ -57,12 +57,14 @@ const router = createBrowserRouter([
           fetch(`http://localhost:5000/addjob/${params.id}`),
       },
       {
-        path: "/viewDetails",
+        path: "/viewDetails/:id",
         element: (
           <PrivateRoute>
             <ViewDetails></ViewDetails>
           </PrivateRoute>
         ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/addjob/${params.id}`),
       },
       {
         path: "/addaJob",

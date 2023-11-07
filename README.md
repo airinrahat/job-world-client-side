@@ -1,8 +1,17 @@
-# React + Vite
+1. **Job Search:** Users can search for job listings by job title, category, and location, making it easy to find relevant job opportunities.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2. **Job Details:** Clicking on a job listing displays detailed information about the job, including the job title, company name, job description, application deadline, and more.
 
-Currently, two official plugins are available:
+3. **User-Friendly UI:** The website offers an intuitive and visually appealing user interface, ensuring a seamless experience for job seekers.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+4. **Update Job Listings:** Authorized users can update job listings by filling out a form with job details and submitting changes to the server.
+   5.React Firebase Authentication.
+5. Access the website in your web browser by visiting `http://localhost:5000`.
+
+## Technologies Used
+
+This project utilizes the following technologies and libraries:
+
+- React
+- React Router for navigation
+- Tailwind CSS

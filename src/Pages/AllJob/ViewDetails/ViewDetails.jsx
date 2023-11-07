@@ -2,9 +2,12 @@
 import { Rating } from "@mui/material";
 import React, { useContext } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
+import { useLoaderData } from "react-router-dom";
 
 const ViewDetails = () => {
   const { user } = useContext(AuthContext);
+  const viewDetail = useLoaderData();
+  const { jobtitle, description, salary, JobApplicants } = viewDetail;
   return (
     <div>
       <div className="card lg:card-side bg-base-100  max-w-sm mx-auto my-8 rounded overflow-hidden  lg:px-0 px-10">
@@ -18,19 +21,19 @@ const ViewDetails = () => {
           </a>
           <div className="p-5">
             <h3 className="text-xl mb-1">
-              <b>Job Banner:</b>
+              <b>Job Banner: </b>
             </h3>
             <h2 className="text-lg">
-              <b> Job title: </b>
+              <b> Job title:{jobtitle} </b>
             </h2>
             <p>
-              <b>Description:</b>
+              <b>Description:{description}</b>
             </p>
             <p>
-              <b> Salary range:</b>
+              <b> Salary range:{salary}</b>
             </p>
             <p>
-              <b> Number of Applicants:</b> :
+              <b> Number of Applicants:{JobApplicants}</b> :
             </p>
             <div className="py-5">
               <button

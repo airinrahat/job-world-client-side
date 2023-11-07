@@ -44,9 +44,6 @@ const MyJob = () => {
           </tbody>
         </table>
       </div>
-      {/* {myjobs.map((myjob) => (
-        <MyJobs key={myjob._id} myjob={myjob}></MyJobs>
-      ))} */}
     </div>
   );
 };

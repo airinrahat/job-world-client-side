@@ -4,7 +4,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const AllJobs = ({ alljob }) => {
-  const { photo, name, jobtitle, applicationDeadline, datepic, salary } =
+  const { _id, photo, name, jobtitle, applicationDeadline, datepic, salary } =
     alljob;
   return (
     <tr>
@@ -26,7 +26,7 @@ const AllJobs = ({ alljob }) => {
       <td> {applicationDeadline}</td>
       <td>{salary}</td>
       <td>
-        <Link to="/viewDetails">
+        <Link to={`/viewDetails/${_id}`}>
           <button className="btn bg-[#18ad50] text-white">Details</button>
         </Link>
       </td>
