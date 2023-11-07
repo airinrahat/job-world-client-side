@@ -28,7 +28,7 @@ https://i.ibb.co/7prrphB/com-logo-4.jpg
 https://i.ibb.co/Xb87HKY/com-logo-3.jpg
 https://i.ibb.co/mSnS8Q7/com-logo-2.jpg
 https://i.ibb.co/yf0Jj04/logo.jpg */}
-      <div className=" grid grid-cols-3 gap-4 my-8">
+      <div className=" grid lg:grid-cols-3 grid-cols-1 gap-4 my-8">
         <div className="card card-side bg-base-100 shadow-xl  ">
           <div>
             <figure>
