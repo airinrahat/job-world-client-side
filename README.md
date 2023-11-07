@@ -15,3 +15,8 @@ This project utilizes the following technologies and libraries:
 - React
 - React Router for navigation
 - Tailwind CSS
+
+## Client-side live link
+
+server side:https://github.com/Porgramming-Hero-web-course/b8a11-server-side-airinrahat<br/>
+clinet side:https://github.com/Porgramming-Hero-web-course/b8a11-client-side-airinrahat
