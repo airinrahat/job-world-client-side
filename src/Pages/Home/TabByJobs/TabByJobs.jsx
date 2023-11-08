@@ -83,52 +83,195 @@ const TabByJobs = () => {
           </TabList>
 
           <TabPanel>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
-              {jobCategoryFour.slice(0, 2).map((jobcategoryFour) => (
-                <div
-                  className=""
-                  key={jobcategoryFour._id}
-                  category={jobcategoryFour}
-                >
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                {jobCategoryOne.slice(0, 1).map((jobcategoryone) => (
                   <div
-                    className="tab-img grid  lg:grid-cols-2"
-                    style={{ border: "1px solid gray" }}
+                    className=""
+                    key={jobcategoryone._id}
+                    category={jobcategoryone}
                   >
-                    <LazyLoad>
-                      <img height={250} src={jobcategoryFour.photo} alt="" />
-                    </LazyLoad>
-                    <div className="m-auto">
-                      <h4>
-                        <b> Name :</b> {jobcategoryFour.name}
-                      </h4>
-                      <h4 className="py-2">
-                        <b> Job Title :</b> {jobcategoryFour.jobtitle}
-                      </h4>
-                      <h4>
-                        <b> Job Posting Date :</b> {jobcategoryFour.datepic}
-                      </h4>
-                      <h4 className="pt-2">
-                        <b> Application Deadline :</b>{" "}
-                        {jobcategoryFour.applicationDeadline}
-                      </h4>
-                      <p className="py-2">
-                        <b> Salary range :</b> {jobcategoryFour.salary}
-                      </p>
+                    <div
+                      className="tab-img grid grid-cols-2"
+                      style={{ border: "1px solid gray" }}
+                    >
+                      <LazyLoad>
+                        <img height={250} src={jobcategoryone.photo} alt="" />
+                      </LazyLoad>
+                      <div className="m-auto">
+                        <h4>
+                          <b> Name :</b> {jobcategoryone.name}
+                        </h4>
+                        <h4 className="py-2">
+                          <b> Job Title :</b> {jobcategoryone.jobtitle}
+                        </h4>
+                        <h4>
+                          <b> Job Posting Date :</b> {jobcategoryone.datepic}
+                        </h4>
+                        <h4 className="pt-2">
+                          <b> Application Deadline :</b>{" "}
+                          {jobcategoryone.applicationDeadline}
+                        </h4>
+                        <p className="py-2">
+                          <b> Salary range :</b> {jobcategoryone.salary}
+                        </p>
 
-                      <p className="py-2 mb-2">
-                        <b> Job Applicants Number :</b>
-                        {/* {jobcategoryFour.available_quantity} */}0
-                      </p>
-                      <Link
-                        to="/SingleJob"
-                        className="btn bg-[#18ad50] text-white"
-                      >
-                        View Details
-                      </Link>
+                        <p className="py-2 mb-2">
+                          <b> Job Applicants Number :</b>
+                          {/* {jobcategoryone.available_quantity} */}0
+                        </p>
+                        <Link
+                          to="/SingleJob"
+                          className="btn bg-[#18ad50] text-white"
+                        >
+                          View Details
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
+              <div>
+                {jobCategoryTow.slice(0, 1).map((jobcategorytow) => (
+                  <div
+                    className=""
+                    key={jobcategorytow._id}
+                    category={jobcategorytow}
+                  >
+                    <div
+                      className="tab-img grid grid-cols-2"
+                      style={{ border: "1px solid gray" }}
+                    >
+                      <LazyLoad>
+                        <img height={250} src={jobcategorytow.photo} alt="" />
+                      </LazyLoad>
+                      <div className="m-auto">
+                        <h4>
+                          <b> Name :</b> {jobcategorytow.name}
+                        </h4>
+                        <h4 className="py-2">
+                          <b> Job Title :</b> {jobcategorytow.jobtitle}
+                        </h4>
+                        <h4>
+                          <b> Job Posting Date:</b> {jobcategorytow.datepic}
+                        </h4>
+                        <h4 className="pt-2">
+                          <b> Application Deadline :</b>{" "}
+                          {jobcategorytow.applicationDeadline}
+                        </h4>
+                        <p className="py-2">
+                          <b>Salary range :</b> {jobcategorytow.salary}
+                        </p>
+
+                        <p className="py-2 mb-2">
+                          <b>Job Applicants Number :</b>
+                          {/* {jobcategorytow.available_quantity} */}
+                        </p>
+                        <Link
+                          to={`/singletoy/${jobcategorytow._id}`}
+                          className="btn bg-[#18ad50] text-white py-2 px-5"
+                        >
+                          View Details
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div>
+                {jobCategoryThree.slice(0, 1).map((jobcategorythree) => (
+                  <div
+                    className=""
+                    key={jobcategorythree._id}
+                    category={jobcategorythree}
+                  >
+                    <div
+                      className="tab-img grid grid-cols-2"
+                      style={{ border: "1px solid gray" }}
+                    >
+                      <LazyLoad>
+                        <img height={250} src={jobcategorythree.photo} alt="" />
+                      </LazyLoad>
+                      <div className="m-auto">
+                        <h4>
+                          <b> Name :</b> {jobcategorythree.name}
+                        </h4>
+                        <h4 className="py-2">
+                          <b> Job Title :</b> {jobcategorythree.jobtitle}
+                        </h4>
+                        <h4>
+                          <b> Job Posting Date :</b> {jobcategorythree.datepic}
+                        </h4>
+                        <h4 className="pt-2">
+                          <b> Application Deadline :</b>{" "}
+                          {jobcategorythree.applicationDeadline}
+                        </h4>
+                        <p className="py-2">
+                          <b>Salary range :</b> {jobcategorythree.salary}
+                        </p>
+
+                        <p className="py-2 mb-2">
+                          <b>Job Applicants Number :</b>
+                          {/* {jobcategorythree.available_quantity} */}0
+                        </p>
+                        <Link
+                          to={`/singletoy/${jobcategorythree._id}`}
+                          className="btn bg-[#18ad50] text-white py-2 px-5"
+                        >
+                          View Details
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div>
+                {jobCategoryFour.slice(0, 1).map((jobcategoryFour) => (
+                  <div
+                    className=""
+                    key={jobcategoryFour._id}
+                    category={jobcategoryFour}
+                  >
+                    <div
+                      className="tab-img grid  lg:grid-cols-2"
+                      style={{ border: "1px solid gray" }}
+                    >
+                      <LazyLoad>
+                        <img height={250} src={jobcategoryFour.photo} alt="" />
+                      </LazyLoad>
+                      <div className="m-auto">
+                        <h4>
+                          <b> Name :</b> {jobcategoryFour.name}
+                        </h4>
+                        <h4 className="py-2">
+                          <b> Job Title :</b> {jobcategoryFour.jobtitle}
+                        </h4>
+                        <h4>
+                          <b> Job Posting Date :</b> {jobcategoryFour.datepic}
+                        </h4>
+                        <h4 className="pt-2">
+                          <b> Application Deadline :</b>{" "}
+                          {jobcategoryFour.applicationDeadline}
+                        </h4>
+                        <p className="py-2">
+                          <b> Salary range :</b> {jobcategoryFour.salary}
+                        </p>
+
+                        <p className="py-2 mb-2">
+                          <b> Job Applicants Number :</b>
+                          {/* {jobcategoryFour.available_quantity} */}0
+                        </p>
+                        <Link
+                          to="/SingleJob"
+                          className="btn bg-[#18ad50] text-white"
+                        >
+                          View Details
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </TabPanel>
 
@@ -199,13 +342,13 @@ const TabByJobs = () => {
                     </LazyLoad>
                     <div className="m-auto">
                       <h4>
-                        <b> Name :</b> {jobcategorytow.jobtitle}
+                        <b> Name :</b> {jobcategorytow.name}
                       </h4>
                       <h4 className="py-2">
-                        <b> Job Title :</b> {jobcategorytow.datepic}
+                        <b> Job Title :</b> {jobcategorytow.jobtitle}
                       </h4>
                       <h4>
-                        <b> Job Posting Date:</b> {jobcategorytow.toy_name}
+                        <b> Job Posting Date:</b> {jobcategorytow.datepic}
                       </h4>
                       <h4 className="pt-2">
                         <b> Application Deadline :</b>{" "}

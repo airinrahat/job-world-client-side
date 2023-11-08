@@ -9,7 +9,6 @@ const MyJob = () => {
   const { user } = useContext(AuthContext);
   const [myjobs, setMyjobs] = useState([]);
 
-  // const url = "http://localhost:5000/addjob";
   const url = `https://job-world-server.vercel.app/myjobs?email=${user.email}`;
   useEffect(() => {
     fetch(url)

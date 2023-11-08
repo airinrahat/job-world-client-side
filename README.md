@@ -22,4 +22,5 @@ This project utilizes the following technologies and libraries:
 ## Client-side live link
 
 server side:https://github.com/Porgramming-Hero-web-course/b8a11-server-side-airinrahat<br/>
-clinet side:https://github.com/Porgramming-Hero-web-course/b8a11-client-side-airinrahat
+clinet side:https://github.com/Porgramming-Hero-web-course/b8a11-client-side-airinrahat<br/>
+live link:https://job-world-a014d.web.app
