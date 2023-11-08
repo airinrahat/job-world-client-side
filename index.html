@@ -11,7 +11,17 @@
     <title>Job World</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+      ></script>
+      <script type="text/javascript">
+        (function () {
+          emailjs.init("Lu5Bue4DtyJCq_HQX");
+        })();
+      </script>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

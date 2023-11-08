@@ -3,7 +3,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { Rating } from "@smastrom/react-rating";
@@ -18,7 +18,7 @@ const TabByJobs = () => {
   const [jobCategoryTow, setJobCategoryTow] = useState([]);
   const [jobCategoryThree, setJobCategoryThree] = useState([]);
   const [jobCategoryFour, setJobCategoryFour] = useState([]);
-
+  const alljobs = useLoaderData();
   const urlOne =
     "http://localhost:5000/alljobscategory?jobcategory=on-site-job";
   useEffect(() => {
@@ -117,7 +117,7 @@ const TabByJobs = () => {
                         {/* {jobcategoryFour.available_quantity} */}0
                       </p>
                       <Link
-                        to={`/singletoy/${jobcategoryFour._id}`}
+                        to="/SingleJob"
                         className="btn bg-[#18ad50] text-white"
                       >
                         View Details

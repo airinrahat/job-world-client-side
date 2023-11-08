@@ -96,7 +96,7 @@ const AddaJob = () => {
               </label>
             </div>
 
-            <div className="form-control w-full md:w-1/2">
+            <div className="form-control w-full  md:w-1/2">
               <label className="label">
                 <span className="label-text text-2xl font-bold text-zinc-600">
                   Job Title

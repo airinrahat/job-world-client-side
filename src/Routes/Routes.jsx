@@ -14,6 +14,7 @@ import AppliedJob from "../Pages/AppliedJob/AppliedJob";
 import Login2 from "../Pages/LoginSingUp/Login2";
 import PrivateRoute from "./PrivateRoute";
 import SingleJob from "../Pages/SingleJob/SingleJob";
+import Contact from "../Pages/Contact/Contact";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login2></Login2>,
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>,
       },
       {
         path: "/singup",

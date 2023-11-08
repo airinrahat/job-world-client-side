@@ -44,8 +44,8 @@ const AppliedJob = () => {
   };
 
   return (
-    <div className="max-w-screen-lg mx-auto">
-      <h3 className="text-4xl font-bold text-center"> Applied Jobs page</h3>
+    <div className="max-w-screen-lg mx-auto mb-12">
+      <h3 className="text-4xl font-bold text-center "> Applied Jobs page</h3>
 
       <div className="text-center mb-5 mt-7">
         <select
