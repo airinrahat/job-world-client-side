@@ -64,9 +64,9 @@ const MyJobs = ({ myjob, setMyjobs, myjobs }) => {
 
       <td className="text-xl"> {jobcategory}</td>
       <td className="text-xl"> {salary}</td>
-      <td className="text-xl"> {applicationDeadline}</td>
 
       <td className="text-xl"> {datepic}</td>
+      <td className="text-xl"> {applicationDeadline}</td>
       <td>
         <Link to={`/updateJob/${_id}`}>
           <button className="btn btn-primary">Update</button>

@@ -1,15 +1,20 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
+import { useContext } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const AddaJob = () => {
   useEffect(() => {
     document.title = "JobWorld | AddaJob";
   }, []);
 
-  const [startDate, setStartDate] = useState(new Date());
+  const { user } = useContext(AuthContext);
+
+  const [startDateOne, setStartDateOne] = useState(new Date());
+  const [startDateTwo, setStartDateTwo] = useState(new Date());
 
   const handleAddJob = (event) => {
     event.preventDefault();
@@ -17,18 +22,18 @@ const AddaJob = () => {
     const form = event.target;
 
     const name = form.name.value;
+    const email = form.email.value;
     const jobtitle = form.jobtitle.value;
     const jobcategory = form.jobcategory.value;
     const salary = form.salary.value;
-    // const JobApplicants = form.JobApplicants.value;
+    const JobApplicants = form.jobapplicants.value;
     const photo = form.photo.value;
-    const applicationDeadline = form.applicationDeadline.value;
-    const datepic = form.datepicker.value;
+    const applicationDeadline = form.applicationdeadline.value;
+    const datepic = form.jobpostingdate.value;
     const description = form.description.value;
 
     const newAddJob = {
       datepic,
-
       jobtitle,
       jobcategory,
       salary,
@@ -36,6 +41,8 @@ const AddaJob = () => {
       photo,
       applicationDeadline,
       description,
+      email,
+      JobApplicants,
     };
     console.log(newAddJob);
 
@@ -73,18 +80,23 @@ const AddaJob = () => {
         <form className="my-10" onSubmit={handleAddJob}>
           {/* form name and quantity row */}
           <div className="md:flex gap-5 mb-5">
-            <div className="form-control md:w-1/2">
+            <div className="form-control md:w-1/2 w-full">
               <label className="label">
                 <span className="label-text text-2xl font-bold text-zinc-600">
                   Name
                 </span>
               </label>
               <label className="input-group input input-bordered w-full">
-                <input type="text" name="name" placeholder=" name" />
+                <input
+                  type="text"
+                  name="name"
+                  defaultValue={user?.displayName}
+                  placeholder=" name"
+                />
               </label>
             </div>
 
-            <div className="form-control md:w-1/2">
+            <div className="form-control w-full md:w-1/2">
               <label className="label">
                 <span className="label-text text-2xl font-bold text-zinc-600">
                   Job Title
@@ -97,7 +109,7 @@ const AddaJob = () => {
           </div>
           {/* form supplier row */}
           <div className="md:flex gap-5 mb-5">
-            <div className="form-control md:w-1/2">
+            <div className="form-control w-full md:w-1/2">
               <label className="label">
                 <span className="label-text text-2xl font-bold text-zinc-600">
                   Job Category
@@ -135,14 +147,14 @@ const AddaJob = () => {
               <label className="input-group input  input-bordered ">
                 <input
                   type="number"
-                  name=" JobApplicants"
+                  name="jobapplicants"
                   placeholder="jobApplicants"
                   className=" input-bordered  w-full"
                 />
               </label>
             </div>
 
-            <div className="form-control md:w-1/2 ">
+            <div className="form-control w-full md:w-1/2 ">
               <label className="label">
                 <span className="label-text text-2xl font-bold text-zinc-600">
                   Photo URL
@@ -163,9 +175,9 @@ const AddaJob = () => {
               </label>
               <label className="input-group input input-bordered text-[#999] w-full pt-3">
                 <DatePicker
-                  selected={startDate}
-                  onChange={(date) => setStartDate(date)}
-                  name="datepicker"
+                  selected={startDateOne}
+                  onChange={(date) => setStartDateOne(date)}
+                  name="jobpostingdate"
                 />
               </label>
             </div>
@@ -176,29 +188,52 @@ const AddaJob = () => {
                   Application Deadline
                 </span>
               </label>
-              <label className="input-group input input-bordered text-[#999] w-full ">
-                <input name="applicationDeadline" type="date"></input>
+              <label className="input-group input input-bordered text-[#999] w-full pt-3">
+                <DatePicker
+                  selected={startDateTwo}
+                  onChange={(date) => setStartDateTwo(date)}
+                  name="applicationdeadline"
+                />
               </label>
             </div>
           </div>
           {/* form Photo url row */}
-          <div className="mb-5">
-            <div className="form-control w-full">
+
+          <div className="md:flex gap-5 mb-5">
+            <div className="form-control w-full md:w-1/2">
               <label className="label">
                 <span className="label-text text-2xl font-bold text-zinc-600">
-                  Job Description
+                  Email
                 </span>
               </label>
-              <label className="input-group rounded-l-lg text-[#999]  ">
+              <label className="input-group input input-bordered w-full">
                 <input
-                  type="text"
-                  name="description"
-                  placeholder="Short description"
-                  className="input input-bordered w-full h-20"
-                ></input>
+                  type="email"
+                  name="email"
+                  defaultValue={user?.email}
+                  placeholder="Email"
+                  className="w-full"
+                />
               </label>
             </div>
-            {/* <div className="form-control w-full">
+            <div className="form-control md:w-1/2">
+              <div className="form-control w-full">
+                <label className="label">
+                  <span className="label-text text-2xl font-bold text-zinc-600">
+                    Job Description
+                  </span>
+                </label>
+                <label className="input-group rounded-l-lg text-[#999]  ">
+                  <input
+                    type="text"
+                    name="description"
+                    placeholder="Short description"
+                    className="input input-bordered  w-full h-20"
+                    style={{ borderRadius: "10px" }}
+                  ></input>
+                </label>
+              </div>
+              {/* <div className="form-control w-full">
             <label className="label">
               <span className="label-text text-2xl font-bold">
                 Short description
@@ -214,7 +249,9 @@ const AddaJob = () => {
               ></input>
             </label>
           </div> */}
+            </div>
           </div>
+
           <div className="md:flex mb-5">
             <div className="form-control md:w-1/2 ml-4">
               <label className="">
@@ -230,7 +267,7 @@ const AddaJob = () => {
                 <input
                   type="reset"
                   value="RESET"
-                  className="btn btn-block text-white bg-[#575757]"
+                  className="btn btn-block  text-white bg-[#575757]"
                 />
               </label>
             </div>

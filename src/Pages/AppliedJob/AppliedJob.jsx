@@ -1,139 +1,111 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
-import React, { useEffect } from "react";
-import {
-  FaClock,
-  FaMapMarkerAlt,
-  FaMoneyBill,
-  FaRegCalendarAlt,
-} from "react-icons/fa";
+import React, { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const AppliedJob = () => {
+  const { user } = useContext(AuthContext);
+  const [myappliedjobs, setMyAppliedjobs] = useState([]);
+  const [selectedJobType, setselectedJobType] = useState("");
+
+  const url = `http://localhost:5000/myappliedjobs?email=${user.email}`;
+  useEffect(() => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setMyAppliedjobs(data));
+  }, [url]);
+
+  const handleJobTypeChange = (event) => {
+    setselectedJobType(event.target.value);
+  };
+
+  // Filter jobs based on the selected job type
+  const filteredJobs = selectedJobType
+    ? myappliedjobs.filter((job) => job.jobcategory === selectedJobType)
+    : myappliedjobs;
+
   useEffect(() => {
     document.title = "JobWorld | AppliendJob";
   }, []);
+
+  console.log(filteredJobs);
+
+  // Replace the URL with the actual URL of your PDF file
+  const pdfUrl =
+    "https://drive.google.com/file/d/1JAgG0tjqdsX0Ns0fLJwDwaPvIQeMKWCD/view?usp=drive_link";
+
+  const handleDownloadClick = () => {
+    // Create a temporary anchor element
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.target = "_blank";
+    link.download = "your-file-name.pdf"; // You can specify the desired file name here
+    link.click();
+  };
+
   return (
     <div className="max-w-screen-lg mx-auto">
-      <h3 className="text-4xl font-bold text-center "> Applied Jobs page</h3>
+      <h3 className="text-4xl font-bold text-center"> Applied Jobs page</h3>
 
-      <div className="text-center my-5">
-        <div className="btn-group btn-group-vertical lg:btn-group-horizontal gap-2 ">
-          <button className="btn ">On Site Job </button>
-          <button className="btn">Part Time</button>
-          <button className="btn">Remote</button>
-          <button className="btn">Hybrid</button>
-        </div>
+      <div className="text-center mb-5 mt-7">
+        <select
+          id="brand-input"
+          value={selectedJobType}
+          onChange={handleJobTypeChange}
+          className="font-normal text-xl bg-[#f4f4f4]  rounded-md border-none  color-[#474747] py-3 px-6"
+        >
+          <option value="">Filter By Job Type</option>
+          <option value="on-site-job">Onsite</option>
+          <option value="remote">Remote</option>
+          <option value="hybrid">Hybrid</option>
+          <option value="part-time">Part Time</option>
+        </select>
       </div>
-      {/* https://i.ibb.co/tpy5wkG/com-logo-5.jpg
-https://i.ibb.co/7prrphB/com-logo-4.jpg
-https://i.ibb.co/Xb87HKY/com-logo-3.jpg
-https://i.ibb.co/mSnS8Q7/com-logo-2.jpg
-https://i.ibb.co/yf0Jj04/logo.jpg */}
-      <div className=" grid lg:grid-cols-3 grid-cols-1 gap-4 my-8">
-        <div className="card card-side bg-base-100 shadow-xl  ">
-          <div>
-            <figure>
-              <img src="https://i.ibb.co/tpy5wkG/com-logo-5.jpg" alt="Movie" />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title text-bold text-2xl ">
-                Software Engineer
-              </h2>
-              <div className="text-start ">
-                <div className="flex gap-2">
-                  <FaMapMarkerAlt className="text-xl text-[#18ad50]"></FaMapMarkerAlt>
-                  <span className=" font-bold"> New York, USA</span>
-                </div>
-                <div className="flex gap-2 my-2">
-                  <FaClock className="text-xl  text-[#18ad50]"></FaClock>
-                  <span className=" font-bold"> On Site Job</span>
-                </div>
-                <div className="flex gap-2">
-                  <FaMoneyBill className="text-xl  text-[#18ad50]"></FaMoneyBill>
-                  <span className=" font-bold"> $123 - $456</span>
-                </div>
-                <div className="flex gap-2  mt-2">
-                  <FaRegCalendarAlt className="text-xl  text-[#18ad50]"></FaRegCalendarAlt>
-                  <span className=" font-bold"> Date Line: 01 Jan, 2045</span>
-                </div>
-              </div>
-              <div className="card-actions mt-3  ">
-                <button className="btn bg-[#18ad50] text-white">
-                  Apply Now
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="card card-side bg-base-100 shadow-xl  ">
-          <div>
-            <figure>
-              <img src="https://i.ibb.co/7prrphB/com-logo-4.jpg" alt="Movie" />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title text-bold text-2xl ">
-                Product Designer
-              </h2>
-              <div className="text-start ">
-                <div className="flex gap-2">
-                  <FaMapMarkerAlt className="text-xl text-[#18ad50]"></FaMapMarkerAlt>
-                  <span className=" font-bold"> New York, USA</span>
-                </div>
-                <div className="flex gap-2 my-2">
-                  <FaClock className="text-xl  text-[#18ad50]"></FaClock>
-                  <span className=" font-bold"> Part Time</span>
-                </div>
-                <div className="flex gap-2">
-                  <FaMoneyBill className="text-xl  text-[#18ad50]"></FaMoneyBill>
-                  <span className=" font-bold"> $123 - $456</span>
-                </div>
-                <div className="flex gap-2  mt-2">
-                  <FaRegCalendarAlt className="text-xl  text-[#18ad50]"></FaRegCalendarAlt>
-                  <span className=" font-bold"> Date Line: 01 Jan, 2045</span>
-                </div>
-              </div>
-              <div className="card-actions mt-3  ">
-                <button className="btn bg-[#18ad50] text-white">
-                  Apply Now
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="card card-side bg-base-100 shadow-xl  ">
-          <div>
-            <figure>
-              <img src="https://i.ibb.co/yf0Jj04/logo.jpg" alt="Movie" />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title text-bold text-2xl ">
-                Wordpress Developer
-              </h2>
-              <div className="text-start ">
-                <div className="flex gap-2">
-                  <FaMapMarkerAlt className="text-xl text-[#18ad50]"></FaMapMarkerAlt>
-                  <span className=" font-bold"> New York, USA</span>
-                </div>
-                <div className="flex gap-2 my-2">
-                  <FaClock className="text-xl  text-[#18ad50]"></FaClock>
-                  <span className=" font-bold"> Remote Time</span>
-                </div>
-                <div className="flex gap-2">
-                  <FaMoneyBill className="text-xl  text-[#18ad50]"></FaMoneyBill>
-                  <span className=" font-bold"> $123 - $456</span>
-                </div>
-                <div className="flex gap-2  mt-2">
-                  <FaRegCalendarAlt className="text-xl  text-[#18ad50]"></FaRegCalendarAlt>
-                  <span className=" font-bold"> Date Line: 01 Jan, 2045</span>
-                </div>
-              </div>
-              <div className="card-actions mt-3  ">
-                <button className="btn bg-[#18ad50] text-white">
-                  Apply Now
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+
+      <div className="">
+        <table className="table">
+          <thead>
+            <tr className="text-2xl font-bold text-zinc-600">
+              <th>Img</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th> Job Title</th>
+              <th> Job Category</th>
+              <th> Salary</th>
+              <th> My resume</th>
+            </tr>
+          </thead>
+          <tbody>
+            {filteredJobs.map((myappliedjob) => (
+              <tr key={myappliedjob._id}>
+                <td>
+                  <div className="flex items-center space-x-3">
+                    <div className="avatar">
+                      <div className="mask mask-squircle w-12 h-12">
+                        <img
+                          src={myappliedjob.photo}
+                          alt="Avatar Tailwind CSS Component"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td className="text-xl">{myappliedjob.name}</td>
+                <td className="text-xl">{myappliedjob.email}</td>
+                <td className="text-xl">
+                  {myappliedjob.jobtitle}
+                  <br />
+                </td>
+                <td className="text-xl"> {myappliedjob.jobcategory}</td>
+
+                <td className="text-xl"> {myappliedjob.salary}</td>
+                <td>
+                  <button onClick={handleDownloadClick}>Download PDF</button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );

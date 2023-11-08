@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 
@@ -14,6 +15,7 @@ import {
 import app from "../Firebase/firebase.confiq";
 import { useEffect } from "react";
 import { useState } from "react";
+import axios from "axios";
 
 export const AuthContext = createContext(null);
 
@@ -45,8 +47,29 @@ const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (loggedUser) => {
+      const userEmail = loggedUser?.email || user?.email;
+      const loggedEmail = { email: userEmail };
+
       setUser(loggedUser);
+      console.log("logged user", loggedUser);
       setLoading(false);
+      if (loggedUser) {
+        axios
+          .post("http://localhost:5000/jwt", loggedEmail, {
+            withCredentials: true,
+          })
+          .then((res) => {
+            console.log("token respnsive", res.data);
+          });
+      } else {
+        axios
+          .post("http://localhost:5000/logout", loggedEmail, {
+            whitCredentials: true,
+          })
+          .then((res) => {
+            console.log(res.data);
+          });
+      }
     });
 
     return () => {

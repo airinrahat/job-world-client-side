@@ -1,15 +1,28 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from "react";
-import { Link, useLoaderData } from "react-router-dom";
 import MyJobs from "./MyJobs";
 import { useState } from "react";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const MyJob = () => {
-  const loadedmyjobs = useLoaderData();
-  const [myjobs, setMyjobs] = useState(loadedmyjobs);
+  const { user } = useContext(AuthContext);
+  const [myjobs, setMyjobs] = useState([]);
+
+  // const url = "http://localhost:5000/addjob";
+  const url = `http://localhost:5000/myjobs?email=${user.email}`;
+  useEffect(() => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setMyjobs(data));
+  }, [url]);
+
+  console.log(myjobs, user);
+
   useEffect(() => {
     document.title = "jobworld | My Jobs";
   }, []);
+
   return (
     <div className="max-w-screen-xl mx-auto my-10">
       <h2 className="text-center text-3xl font-bold my-5">

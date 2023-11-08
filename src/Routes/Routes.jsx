@@ -49,7 +49,6 @@ const router = createBrowserRouter([
             <MyJob></MyJob>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/addjob"),
       },
       {
         path: "/updateJob/:id",

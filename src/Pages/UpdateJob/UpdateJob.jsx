@@ -1,8 +1,10 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const UpdateJob = () => {
   useEffect(() => {
@@ -32,13 +34,12 @@ const UpdateJob = () => {
     const salary = form.salary.value;
     // const JobApplicants = form.JobApplicants.value;
     const photo = form.photo.value;
-    const applicationDeadline = form.applicationDeadline.value;
-    const jobpostingdate = form.jobpostingdate.value;
+    const applicationDeadline = form.applicationdeadline.value;
+    const datepic = form.jobpostingdate.value;
     const description = form.description.value;
 
     const updateJob = {
       datepic,
-
       jobtitle,
       jobcategory,
       salary,
@@ -69,6 +70,10 @@ const UpdateJob = () => {
         }
       });
   };
+
+  const [startDateOne, setStartDateOne] = useState(new Date());
+  const [startDateTwo, setStartDateTwo] = useState(new Date());
+
   return (
     <div>
       <div className="max-w-screen-xl mx-auto mt-5 px-10 lg:px-0">
@@ -192,10 +197,11 @@ const UpdateJob = () => {
                 </span>
               </label>
               <label className="input-group input input-bordered text-[#999] w-full pt-3">
-                <input
-                  type="date"
+                <DatePicker
+                  selected={startDateOne}
+                  onChange={(date) => setStartDateOne(date)}
                   name="jobpostingdate"
-                  placeholder=" job posting date"
+                  defaultValue={datepic}
                 />
               </label>
             </div>
@@ -207,7 +213,12 @@ const UpdateJob = () => {
                 </span>
               </label>
               <label className="input-group input input-bordered text-[#999] w-full pt-3">
-                <input name="applicationDeadline" type="date"></input>
+                <DatePicker
+                  selected={startDateTwo}
+                  onChange={(date) => setStartDateTwo(date)}
+                  name="applicationdeadline"
+                  defaultValue={applicationDeadline}
+                />
               </label>
             </div>
           </div>
