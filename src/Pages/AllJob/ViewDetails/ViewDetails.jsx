@@ -55,7 +55,7 @@ const ViewDetails = () => {
     console.log(formattedDate);
 
     if (formattedDate <= applicationDeadline) {
-      fetch("http://localhost:5000/appliedjob/", {
+      fetch("https://job-world-server.vercel.app/appliedjob/", {
         method: "POST",
         headers: {
           "content-type": "application/json",

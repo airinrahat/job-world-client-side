@@ -20,28 +20,31 @@ const TabByJobs = () => {
   const [jobCategoryFour, setJobCategoryFour] = useState([]);
   const alljobs = useLoaderData();
   const urlOne =
-    "http://localhost:5000/alljobscategory?jobcategory=on-site-job";
+    "https://job-world-server.vercel.app/alljobscategory?jobcategory=on-site-job";
   useEffect(() => {
     fetch(urlOne)
       .then((res) => res.json())
       .then((data) => setJobCategoryOne(data));
   }, [urlOne]);
 
-  const urlTow = "http://localhost:5000/alljobscategory?jobcategory=remote";
+  const urlTow =
+    "https://job-world-server.vercel.app/alljobscategory?jobcategory=remote";
   useEffect(() => {
     fetch(urlTow)
       .then((res) => res.json())
       .then((data) => setJobCategoryTow(data));
   }, [urlTow]);
 
-  const urlThree = "http://localhost:5000/alljobscategory?jobcategory=hybrid";
+  const urlThree =
+    "https://job-world-server.vercel.app/alljobscategory?jobcategory=hybrid";
   useEffect(() => {
     fetch(urlThree)
       .then((res) => res.json())
       .then((data) => setJobCategoryThree(data));
   }, [urlThree]);
 
-  const urlFour = "http://localhost:5000/alljobscategory?jobcategory=part-time";
+  const urlFour =
+    "https://job-world-server.vercel.app/alljobscategory?jobcategory=part-time";
   useEffect(() => {
     fetch(urlThree)
       .then((res) => res.json())

@@ -10,7 +10,7 @@ const MyJob = () => {
   const [myjobs, setMyjobs] = useState([]);
 
   // const url = "http://localhost:5000/addjob";
-  const url = `http://localhost:5000/myjobs?email=${user.email}`;
+  const url = `https://job-world-server.vercel.app/myjobs?email=${user.email}`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())

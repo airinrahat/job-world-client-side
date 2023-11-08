@@ -55,7 +55,7 @@ const AuthProvider = ({ children }) => {
       setLoading(false);
       if (loggedUser) {
         axios
-          .post("http://localhost:5000/jwt", loggedEmail, {
+          .post("https://job-world-server.vercel.app/jwt", loggedEmail, {
             withCredentials: true,
           })
           .then((res) => {
@@ -63,7 +63,7 @@ const AuthProvider = ({ children }) => {
           });
       } else {
         axios
-          .post("http://localhost:5000/logout", loggedEmail, {
+          .post("https://job-world-server.vercel.app/logout", loggedEmail, {
             whitCredentials: true,
           })
           .then((res) => {
