@@ -45,35 +45,46 @@ const AuthProvider = ({ children }) => {
     return signOut(auth);
   };
 
+  // useEffect(() => {
+  //   const unsubscribe = onAuthStateChanged(auth, (loggedUser) => {
+  //     const userEmail = loggedUser?.email || user?.email;
+  //     const loggedEmail = { email: userEmail };
+
+  //     setUser(loggedUser);
+  //     console.log("logged user", loggedUser);
+  //     setLoading(false);
+  //     if (loggedUser) {
+  //       axios
+  //         .post("https://job-world-server.vercel.app/jwt", loggedEmail, {
+  //           withCredentials: true,
+  //         })
+  //         .then((res) => {
+  //           console.log("token respnsive", res.data);
+  //         });
+  //     } else {
+  //       axios
+  //         .post("https://job-world-server.vercel.app/logout", loggedEmail, {
+  //           whitCredentials: true,
+  //         })
+  //         .then((res) => {
+  //           console.log(res.data);
+  //         });
+  //     }
+  //   });
+
+  //   return () => {
+  //     unsubscribe();
+  //   };
+  // }, []);
+
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (loggedUser) => {
-      const userEmail = loggedUser?.email || user?.email;
-      const loggedEmail = { email: userEmail };
-
-      setUser(loggedUser);
-      console.log("logged user", loggedUser);
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      console.log("current user", currentUser);
       setLoading(false);
-      if (loggedUser) {
-        axios
-          .post("https://job-world-server.vercel.app/jwt", loggedEmail, {
-            withCredentials: true,
-          })
-          .then((res) => {
-            console.log("token respnsive", res.data);
-          });
-      } else {
-        axios
-          .post("https://job-world-server.vercel.app/logout", loggedEmail, {
-            whitCredentials: true,
-          })
-          .then((res) => {
-            console.log(res.data);
-          });
-      }
     });
-
     return () => {
-      unsubscribe();
+      return unsubscribe();
     };
   }, []);
 

@@ -8,7 +8,8 @@
 
 4. **Update Job Listings:** Authorized users can update job listings by filling out a form with job details and submitting changes to the server.
    5.React Firebase Authentication.
-5. Access the website in your web browser by visiting `http://localhost:5000`.
+5. Access the website in your web browser by visiting
+   live link:https://job-world-a014d.web.app
 
 ## Technologies Used
 
