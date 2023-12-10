@@ -233,22 +233,7 @@ const AddaJob = () => {
                   ></input>
                 </label>
               </div>
-              {/* <div className="form-control w-full">
-            <label className="label">
-              <span className="label-text text-2xl font-bold">
-                Short description
-              </span>
-            </label>
-            <label className="input-group">
-              <input
-                type="text"
-                name="description"
-                defaultValue={description}
-                placeholder="Short description"
-                className="input input-bordered w-full h-20"
-              ></input>
-            </label>
-          </div> */}
+          
             </div>
           </div>
 
